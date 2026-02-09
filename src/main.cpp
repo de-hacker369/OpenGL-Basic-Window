@@ -1,6 +1,29 @@
 #include <GL/glut.h>
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);   // Clear the screen with the background color
+      // --- Three points ---
+    glColor3f(1.0, 0.0, 0.0);   // Red
+    glBegin(GL_POINTS);
+        glVertex2f(-100, 100);
+        glVertex2f(0, 0);
+        glVertex2f(100, -100);
+    glEnd();
+     // --- One line ---
+    glColor3f(0.0, 1.0, 0.0);   // Green
+    glBegin(GL_LINES);
+        glVertex2f(-150, -50);
+        glVertex2f(150, -50);
+    glEnd();
+      // --- One filled triangle ---
+    glColor3f(0.0, 0.0, 1.0);   // Blue
+    glBegin(GL_TRIANGLES);
+        glVertex2f(-50, -150);
+        glVertex2f(50, -150);
+        glVertex2f(0, -50);
+    glEnd();
+
+
+
     glFlush();                      // Force execution of OpenGL commands
 }
 void init() {
