@@ -7,6 +7,7 @@ void display() {
         glVertex2f(-100, 100);
         glVertex2f(0, 0);
         glVertex2f(100, -100);
+    
     glEnd();
      // --- One line ---
     glColor3f(0.0, 1.0, 0.0);   // Green
@@ -30,6 +31,7 @@ void init() {
     glClearColor(1.0, 1.0, 1.0, 1.0);   // Set background to white (RGBA)
     glMatrixMode(GL_PROJECTION);        // Switch to projection matrix
     gluOrtho2D(-320, 320, -240, 240);   // Define a 2D Cartesian coordinate system
+     glPointSize(8.0);
 }
 
 int main(int argc, char** argv) {
